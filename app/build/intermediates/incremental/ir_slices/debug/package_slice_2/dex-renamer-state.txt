@@ -1,4 +1,4 @@
-#Wed Dec 11 18:40:03 EST 2019
-base.0=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+#Wed Dec 11 19:48:20 EST 2019
+base.0=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
 path.0=classes.dex
 renamed.0=classes.dex

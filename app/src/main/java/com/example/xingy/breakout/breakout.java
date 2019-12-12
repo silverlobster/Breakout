@@ -78,7 +78,7 @@ public class breakout extends Activity {
             if (ourHolder.getSurface().isValid()) {
                 canvas = ourHolder.lockCanvas();
                 canvas.drawColor(Color.argb(255, 230, 89, 73));
-                paint.setColor(Color.argb(255, 0, 0, 0));
+                paint.setColor(Color.argb(255, 39, 8, 133));
 
                 canvas.drawRect(paddle.getRect(), paint);
                 ourHolder.unlockCanvasAndPost(canvas);

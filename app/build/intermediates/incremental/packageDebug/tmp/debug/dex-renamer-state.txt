@@ -1,4 +1,4 @@
-#Wed Dec 11 18:40:03 EST 2019
+#Wed Dec 11 19:48:20 EST 2019
 path.1=classes.dex
 path.0=classes.dex
 renamed.5=classes6.dex
@@ -10,8 +10,8 @@ renamed.0=classes.dex
 base.5=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
 base.4=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
 base.3=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
-base.2=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
-base.1=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+base.2=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
+base.1=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
 base.0=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
 path.5=classes.dex
 path.4=classes.dex

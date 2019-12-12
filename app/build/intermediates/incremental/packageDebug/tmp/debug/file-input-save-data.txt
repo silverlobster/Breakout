@@ -1,13 +1,13 @@
 #Internal package file, do not edit.
-#Wed Dec 11 18:40:03 EST 2019
+#Wed Dec 11 19:48:20 EST 2019
 2.base=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
 5.set=DEX
 0.path=classes.dex
 2.baseType=DIRECTORY
-3.base=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+3.base=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
 2.set=DEX
 1.path=classes.dex
-4.base=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+4.base=C\:\\Users\\xingy\\Desktop\\Breakout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
 count=6
 5.baseType=DIRECTORY
 2.path=classes.dex

@@ -39,6 +39,7 @@ public class breakout extends Activity {
         int screenY;
 
         Paddle paddle;
+        Ball ball;
 
         public BreakoutView(Context context) {
             super(context);
@@ -52,6 +53,7 @@ public class breakout extends Activity {
             screenY = size.y;
 
             paddle = new Paddle(screenX, screenY);
+            ball = new Ball(screenX, screenY);
 
         }
 
@@ -72,6 +74,7 @@ public class breakout extends Activity {
 
         public void update() {
             paddle.update(fps);
+            ball.update(fps);
         }
 
         public void draw() {
@@ -79,8 +82,9 @@ public class breakout extends Activity {
                 canvas = ourHolder.lockCanvas();
                 canvas.drawColor(Color.argb(255, 230, 89, 73));
                 paint.setColor(Color.argb(255, 39, 8, 133));
-
                 canvas.drawRect(paddle.getRect(), paint);
+                paint.setColor(Color.argb(255, 0, 0, 0));
+                canvas.drawRect(ball.getRect(), paint);
                 ourHolder.unlockCanvasAndPost(canvas);
             }
         }

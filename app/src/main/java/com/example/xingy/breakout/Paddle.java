@@ -11,8 +11,8 @@ public class Paddle {
     private float x;
     private float y;
 
-    private float rightbound;
-    private float leftbound;
+    private float rightBound;
+    private float leftBound;
 
     private float paddleSpeed;
 
@@ -23,8 +23,8 @@ public class Paddle {
     private int paddleMoving = STOPPED;
 
     public Paddle(int screenX, int screenY) {
-        rightbound = screenX;
-        leftbound = 0;
+        rightBound = screenX;
+        leftBound = 0;
 
         length = 130;
         height = 20;
@@ -46,12 +46,12 @@ public class Paddle {
     }
 
     public void update(long fps) {
-        if ((x + length) > rightbound ) {
-            x = rightbound - length;
+        if ((x + length) > rightBound ) {
+            x = rightBound - length;
         }
 
-        if ( x < leftbound) {
-            x = leftbound;
+        if ( x < leftBound) {
+            x = leftBound;
         }
 
         if (paddleMoving == LEFT) {

@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Ball {
     private RectF rect;
-    private float length = 50;
-    private float height = 50;
+    private float length = 25;
+    private float height = 25;
     private float speedX = 700;
     private float speedY = 700;
 
@@ -19,11 +19,6 @@ public class Ball {
         bottomBound = screenY;
 
         rect = new RectF();
-
-        //rect.right = screenX / 2;
-        //rect.top = screenY / 2;
-        //rect.bottom = rect.top - height;
-        //rect.left = rect.right - length;
     }
 
     public RectF getRect() {

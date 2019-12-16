@@ -40,6 +40,11 @@ public class breakout extends Activity {
 
         Paddle paddle;
         Ball ball;
+        Ball ball2;
+
+        Brick[] bricks = new Brick[200];
+        int numBricks = 0;
+
 
         public BreakoutView(Context context) {
             super(context);
@@ -54,11 +59,26 @@ public class breakout extends Activity {
 
             paddle = new Paddle(screenX, screenY);
             ball = new Ball(screenX, screenY);
+            ball2 = new Ball(screenX, screenY);
             createBricksAndRestart();
         }
 
+
         public void createBricksAndRestart(){
             ball.reset(screenX, screenY);
+            ball2.reset(screenX, screenY);
+
+            int brickWidth = screenX / 10;
+            int brickHeight = screenY / 20;
+
+            numBricks = 0;
+
+            for(int column = 0; column < 10; column++ ){
+                for(int row = 0; row < 6; row++ ){
+                    bricks[numBricks] = new Brick(row, column, brickWidth, brickHeight);
+                    numBricks++;
+                }
+            }
         }
 
         @Override
@@ -79,6 +99,7 @@ public class breakout extends Activity {
         public void update() {
             paddle.update(fps);
             ball.update(fps);
+            ball2.update(fps);
         }
 
         public void draw() {
@@ -86,9 +107,20 @@ public class breakout extends Activity {
                 canvas = ourHolder.lockCanvas();
                 canvas.drawColor(Color.argb(255, 230, 89, 73));
                 paint.setColor(Color.argb(255, 39, 8, 133));
+                //draw paddle
                 canvas.drawRect(paddle.getRect(), paint);
+                //change paint colour
                 paint.setColor(Color.argb(255, 0, 0, 0));
+                //draw ball
                 canvas.drawRect(ball.getRect(), paint);
+                canvas.drawRect(ball2.getRect(), paint);
+                paint.setColor(Color.argb(255,  177, 185, 199));
+                for(int i = 0; i < numBricks; i++) {
+                    if (bricks[i].getVisibility()) {
+                        //Log.d("myTag", "This is my message");
+                        canvas.drawRect(bricks[i].getRect(), paint);
+                    }
+                }
                 ourHolder.unlockCanvasAndPost(canvas);
             }
         }

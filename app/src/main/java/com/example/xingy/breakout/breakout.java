@@ -54,7 +54,11 @@ public class breakout extends Activity {
 
             paddle = new Paddle(screenX, screenY);
             ball = new Ball(screenX, screenY);
+            createBricksAndRestart();
+        }
 
+        public void createBricksAndRestart(){
+            ball.reset(screenX, screenY);
         }
 
         @Override

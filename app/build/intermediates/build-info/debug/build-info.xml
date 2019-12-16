@@ -2,34 +2,34 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="28"
-    build-mode="HOT_WARM"
+    build-mode="COLD"
     density="xxhdpi"
     format="10"
     plugin-version="3.1.4"
-    timestamp="1576446150578"
+    timestamp="1576457487533"
     token="-960791060875372524"
-    verifier="COMPATIBLE" >
+    verifier="CLASS_ADDED" >
 
     <task
         name="javac"
-        duration="86" />
+        duration="60" />
     <task
         name="instant-run-dex"
-        duration="22" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="9" />
+        duration="12" />
     <task
         name="verifier"
         duration="2" />
 
     <artifact
-        location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1576443791510"
+        timestamp="1576454987066"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -73,60 +73,11 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1576445566553"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1576457487533"
+        verifier="CLASS_ADDED" >
         <artifact
             location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1576445584979"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\builds\debug\1576445584979\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1576445693918"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\builds\debug\1576445693918\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1576445732062"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\builds\debug\1576445732062\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1576445974098"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\builds\debug\1576445974098\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1576446039540"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\builds\debug\1576446039540\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1576446150578"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\xingy\Desktop\Breakout\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

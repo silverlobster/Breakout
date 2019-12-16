@@ -16,6 +16,7 @@ public class Brick {
     }
 
     public RectF getRect(){
+        //chicken
         return this.rect;
     }
 

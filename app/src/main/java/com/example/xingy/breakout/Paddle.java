@@ -42,6 +42,7 @@ public class Paddle {
 
 
     public void setMovementState(int state) {
+        //chicken
         paddleMoving = state;
     }
 

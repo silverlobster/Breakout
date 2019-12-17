@@ -104,6 +104,7 @@ public class breakout extends Activity {
         }
 
         public void createBricksAndRestart(){
+            paddle.reset(screenX, screenY);
             ball.reset(screenX, screenY);
 
             int brickWidth = screenX / 10;
@@ -112,11 +113,12 @@ public class breakout extends Activity {
             numBricks = 0;
 
             for(int column = 0; column < 10; column++ ){
-                for(int row = 0; row < 6; row++ ){
+                for(int row = 0; row < 15; row++ ){
                     bricks[numBricks] = new Brick(row, column, brickWidth, brickHeight);
                     numBricks++;
                 }
             }
+
             score = 0;
             lives = 3;
         }
@@ -146,7 +148,14 @@ public class breakout extends Activity {
                 if (bricks[i].getVisibility()) {
                     if (RectF.intersects(bricks[i].getRect(), ball.getRect())) {
                         bricks[i].setInvisible();
-                        ball.reverseY();
+                        if ((ball.getRect().centerY() < bricks[i].getRect().top
+                                && ball.getRect().centerY() > bricks[i].getRect().bottom)) {
+                            ball.reverseX();
+                        }
+                        else if (ball.getRect().centerY() <= bricks[i].getRect().bottom
+                                || ball.getRect().centerY() >= bricks[i].getRect().top) {
+                            ball.reverseY();
+                        }
                         score = score + 10;
                         soundPool.play(explodeID, 1, 1, 0, 0, 1);
                     }
@@ -158,8 +167,8 @@ public class breakout extends Activity {
                 ball.reverseY();
                 ball.clearObstacleY(paddle.getRect().top - 2);
                 soundPool.play(beep1ID, 1, 1, 0, 0, 1);
-                Log.d("TAG","ITWORKSITWORKSWORKS");
             }
+
             // Bounce the ball back when it hits the bottom of screen
             if (ball.getRect().bottom > screenY) {
                 ball.reverseY();
@@ -176,27 +185,24 @@ public class breakout extends Activity {
             }
 
             // Bounce the ball back when it hits the top of screen
-            if (ball.getRect().top < 0)
-
-            {
+            if (ball.getRect().top <= 0) {
+                ball.getRect().top = 0;
                 ball.reverseY();
                 ball.clearObstacleY(12);
-
                 soundPool.play(beep2ID, 1, 1, 0, 0, 1);
             }
 
             // If the ball hits left wall bounce
-            if (ball.getRect().left < 0)
-
-            {
+            if (ball.getRect().left <= 0) {
+                ball.getRect().left = 0;
                 ball.reverseX();
                 ball.clearObstacleX(2);
                 soundPool.play(beep3ID, 1, 1, 0, 0, 1);
             }
 
             // If the ball hits right wall bounce
-            if (ball.getRect().right > screenX - 10) {
-
+            if (ball.getRect().right >= screenX) {
+                ball.getRect().right = screenX;
                 ball.reverseX();
                 ball.clearObstacleX(screenX - 22);
 
@@ -224,6 +230,7 @@ public class breakout extends Activity {
                 paint.setColor(Color.argb(255, 0, 0, 0));
                 //draw ball
                 canvas.drawRect(ball.getRect(), paint);
+
                 paint.setColor(Color.argb(255,  177, 185, 199));
                 for(int i = 0; i < numBricks; i++) {
                     if (bricks[i].getVisibility()) {
@@ -231,6 +238,7 @@ public class breakout extends Activity {
                         canvas.drawRect(bricks[i].getRect(), paint);
                     }
                 }
+
                 paint.setColor(Color.argb(255,  255, 255, 255));
 
                 paint.setTextSize(40);

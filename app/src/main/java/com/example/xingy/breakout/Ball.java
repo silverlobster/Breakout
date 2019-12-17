@@ -5,10 +5,10 @@ import java.util.Random;
 
 public class Ball {
     private RectF rect;
-    private float length = 25;
-    private float height = 25;
-    private float speedX = 700;
-    private float speedY = 700;
+    private float length = 20;
+    private float height = 20;
+    private float speedX = 200;
+    private float speedY = 200;
 
     private float rightBound;
     private float bottomBound;
@@ -61,9 +61,9 @@ public class Ball {
 
     public void reset(int x, int y) {
         rect.left = x / 2;
-        rect.top = y / 2;
-        rect.right = x / 2 + length;
-        rect.bottom = y / 2 - height;
+        rect.top = y - 100;
+        rect.right = rect.left + length;
+        rect.bottom = rect.top + height;
     }
 
     public void update(long fps) {

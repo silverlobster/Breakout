@@ -27,13 +27,20 @@ public class Paddle {
         leftBound = 0;
 
         length = 200;
-        height = 20;
+        height = 40;
 
         x = (screenX / 2 ) - 50;
         y = screenY - 100;
 
         rect = new RectF(x, y, x + length, y + height);
         paddleSpeed = 700;
+    }
+
+    public void reset(int x, int y) {
+        rect.left = x / 2 - length / 2;
+        rect.top = y - 50;
+        rect.right = rect.left + length;
+        rect.bottom = rect.top + height;
     }
 
     public RectF getRect() {

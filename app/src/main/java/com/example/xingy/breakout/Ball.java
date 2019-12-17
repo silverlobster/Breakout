@@ -35,8 +35,18 @@ public class Ball {
 
     public void setRandomSpeed() {
         Random random = new Random();
-        speedX += random.nextInt(50);
-        speedY += random.nextInt(50);
+        speedX += random.nextInt(100);
+        speedY += random.nextInt(100);
+    }
+
+
+    public void setRandomXVelocity(){
+        Random generator = new Random();
+        int answer = generator.nextInt(2);
+
+        if(answer == 0){
+            reverseX();
+        }
     }
 
     public void clearObstacleY(float y) {
@@ -57,14 +67,6 @@ public class Ball {
     }
 
     public void update(long fps) {
-        if (rect.right >= rightBound || rect.left <= 0) {
-            setRandomSpeed();
-            reverseX();
-        }
-        if (rect.top <= 0 || rect.bottom >= bottomBound) {
-            setRandomSpeed();
-            reverseY();
-        }
         rect.left += speedX / fps;
         rect.top += speedY / fps;
         rect.right = rect.left + length;

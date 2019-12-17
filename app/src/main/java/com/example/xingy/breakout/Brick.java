@@ -8,7 +8,7 @@ public class Brick {
 
     public Brick(int row, int column, int width, int height){
         isVisible = true;
-        int padding = 5;
+        int padding = 2;
         rect = new RectF(column * width + padding,
                 row * height + padding,
                 column * width + width - padding,

@@ -26,20 +26,19 @@ public class Paddle {
         rightBound = screenX;
         leftBound = 0;
 
-        length = 130;
+        length = 200;
         height = 20;
 
         x = (screenX / 2 ) - 50;
-        y = screenY - 30;
+        y = screenY - 100;
 
         rect = new RectF(x, y, x + length, y + height);
-        paddleSpeed = 300;
+        paddleSpeed = 700;
     }
 
     public RectF getRect() {
         return rect;
     }
-
 
     public void setMovementState(int state) {
         //testing
@@ -47,14 +46,13 @@ public class Paddle {
     }
 
     public void update(long fps) {
+
         if ((x + length) > rightBound ) {
             x = rightBound - length;
         }
-
         if ( x < leftBound) {
             x = leftBound;
         }
-
         if (paddleMoving == LEFT) {
             x = x - paddleSpeed / fps;
         }

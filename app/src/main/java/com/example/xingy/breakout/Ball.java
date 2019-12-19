@@ -7,8 +7,8 @@ public class Ball {
     private RectF rect;
     private float length = 20;
     private float height = 20;
-    private float speedX = 200;
-    private float speedY = 200;
+    private float speedX = 300;
+    private float speedY = 300;
 
     private float rightBound;
     private float bottomBound;

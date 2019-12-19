@@ -28,3 +28,24 @@ public class Brick {
     }
 
 }
+/*
+                        if (ball.getRect().centerX() > bricks[i].getRect().left
+                                && ball.getRect().centerX() < bricks[i].getRect().right) {
+                            ball.reverseY();
+                            if (ball.getRect().top > bricks[i].getRect().centerY()) {
+                                ball.clearObstacleY(bricks[i].getRect().bottom - ball.getRect().height());
+                            }
+                            else {
+                                ball.clearObstacleY(bricks[i].getRect().top + ball.getRect().height());
+                            }
+                        }
+                        else {
+                            ball.reverseX();
+                            if(ball.getRect().left > bricks[i].getRect().centerX()) {
+                                ball.clearObstacleX(bricks[i].getRect().right + ball.getRect().width());
+                            }
+                            else {
+                                ball.clearObstacleX(bricks[i].getRect().left - ball.getRect().width());
+                            }
+                        }
+ */
